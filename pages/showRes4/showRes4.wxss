@@ -1,0 +1,78 @@
+page{
+  background-color: #f6f6f6;
+  padding-top:18px;
+}
+.result{
+  height: 100px;
+  line-height: 40px;
+  margin:20px 40px;
+  margin-left:20px;
+  margin-right:20px;
+  text-align: center;
+}
+.sec2{
+  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkwmsuw0g9j20k000g0si.jpg) top center no-repeat;
+  padding:0 20px;
+  font-size: 15px;
+  background-color: #f6f6f6;
+}
+.txt{
+  border-bottom:1px solid #ddd;
+  color: #548CD7;
+  padding:30px;
+  padding-left: 35px;
+  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkwmx6cpvdj200w00w0sh.jpg) center left no-repeat;
+}
+.jibie{
+  padding:10px 3px;
+  font-size: 18px;
+  color:#f00;
+  font-weight:bold;
+}
+.jieguo{
+  font-size:14px;
+  color:#444;
+  text-indent: 28px;
+}
+.btn{
+  margin:20px 0;
+  margin-left:10px;
+  margin-right:10px;
+}
+.lan{
+  background-color: #548CD7;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+}
+.fenxiang{
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-left:10px;
+  margin-right:10px;
+}
+.back_index{
+  text-align: right;
+  font-weight: bold;
+  color: red;
+  margin: 10px 0;
+}
+.title{
+  width: 100%;
+  text-align: center;
+  color: #548CD7;
+}
+.per{
+  display:block;
+  width: 100%;
+  text-align: center;
+  color:#548CD7;
+}
+.cont{
+  display: block;
+  font-size:14px;
+  padding: 5px 20px 30px 20px;
+  color: #666;
+  text-align: justify;
+  line-height: 25px;
+}

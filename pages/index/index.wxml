@@ -1,0 +1,28 @@
+<view >  
+    <view class = 'top'>
+<image src='../../img/logo.png' class='icon'></image>
+<image src='../../img/bannerdark.png' class='icon2'></image>
+</view>
+
+    <view class='selection2'>
+        <view class='header'>
+            <text>专业测试</text>
+        </view>
+        <view >
+             <view class='info-bot' wx:key wx:for="{{testItems}}" data-id='{{item.id}}' data-url='{{item.url}}' bindtap='click_test'>
+              <view class='gywm'>
+                    <text class='text-icon'>{{item.title}}</text>
+                    <text class='text-all'></text>
+              </view>
+            </view>
+        </view>
+            
+      
+    </view>
+    <view class="btn">
+                  <button open-type="getUserInfo" bindgetuserinfo ="getUserInfo"  class="lan" style="">点击授权 </button>
+              </view>
+
+
+</view>  
+

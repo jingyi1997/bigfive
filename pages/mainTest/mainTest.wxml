@@ -1,0 +1,89 @@
+<view class = 'top'>
+<view>
+<image src='../../img/logo.png' class='icon'></image>
+</view>
+<view class='sec_title' >根据您的情况对下面的描述打分</view>
+</view>
+<view>
+<progress percent="{{progress}}" color="#548CD7"  active-mode="forwards" backgroundColor="#ddd"  />
+</view>
+<view class='current_ques'>
+     {{current_question+1}}/{{testitems.length}}
+</view>
+<view class="big" >
+      <view class='test-title' >
+             {{testitems[current_question].ques}}
+      </view>
+      <view wx:if="{{testitems[current_question].id>0&&testitems[current_question].id<21}}">
+        <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" >
+          
+          <label class="radio options" wx:key  wx:for="{{ansitems}}" >
+            <radio value="{{item.value}}" checked="{{aa}}"/>  {{arr[index]}}.  {{item.ans}}
+          </label>
+         
+        </radio-group>
+      </view>
+      <view wx:elif="{{testitems[current_question].id==21||testitems[current_question].id==22}}">
+        <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" >
+          
+          <label class="radio options" wx:key  wx:for="{{ansitems2}}" >
+            <radio value="{{item.value}}" checked="{{aa}}"/>  {{arr[index]}}.  {{item.ans}}
+          </label>
+         
+        </radio-group>
+      </view>
+      <view wx:elif="{{testitems[current_question].id==0}}">
+        <view class="inputView" style="margin-top: 10% ">
+          <input class="input" type="number" placeholder="请输入微信好友数量"
+                  bindinput="userInput"/>
+        </view>
+        <view class='btn'>
+          <button bindtap="userclickbtn" data-id="{{testitems[current_question].id}}" class="next" style="">下一题 </button>
+        </view>
+      </view>
+      <view wx:elif="{{testitems[current_question].id==23}}">
+        <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" >
+          <label class="radio options" wx:key  wx:for="{{sexansitems}}" >
+            <radio value="{{item.value}}" checked="{{aa}}"/>  {{arr[index]}}.  {{item.ans}}
+          </label>
+        </radio-group>
+      </view>
+      <view wx:elif="{{testitems[current_question].id==24}}">
+        <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" >
+          <label class="radio options" wx:key  wx:for="{{engansitems}}" >
+            <radio value="{{item.value}}" checked="{{aa}}"/>  {{arr[index]}}.  {{item.ans}}
+          </label>
+        </radio-group>
+      </view>
+      <view wx:elif="{{testitems[current_question].id==25}}">
+        <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" >
+          <label class="radio options" wx:key  wx:for="{{numansitems}}" >
+            <radio value="{{item.value}}" checked="{{aa}}"/>  {{arr[index]}}.  {{item.ans}}
+          </label>
+        </radio-group>
+      </view>
+      <view wx:elif="{{testitems[current_question].id==26}}">
+        <picker bindchange="ageInput"  range="{{agearray}}" value="{{ageval}}">
+          <view class="pickerView">
+              年龄：{{agearray[ageval]}}
+          </view>
+          
+        </picker>
+        <view wx:if="{{name==null}}" class='btn' >
+            <button bindtap="userclickbtn"   data-id="{{testitems[current_question].id}}" class="next" style="">下一题 </button>
+        </view>
+        <view wx:else class='btn' >
+            <button bindtap="userclickbtn"   data-id="{{testitems[current_question].id}}" class="next" style="">看结果 </button>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="inputView" style="margin-top: 10% ">
+          <input class="input"  placeholder="您的名字或昵称" bindinput="userInput"/>
+        </view>
+        <view class='btn' >
+          <button bindtap="userclickbtn" data-id="{{testitems[current_question].id}}" class="next" style="">看结果       </button>
+        </view>
+      </view>
+
+</view>
+

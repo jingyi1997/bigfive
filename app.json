@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/myInfo/myInfo",
+    "pages/myTest/myTest",
+    "pages/mainTest/mainTest",
+    "pages/mainTest2/mainTest2",
+    "pages/mainTest3/mainTest3",
+    "pages/mainTest4/mainTest4",
+    "pages/testRes/testRes",
+    "pages/testRes2/testRes2",
+    "pages/testRes3/testRes3",
+    "pages/testRes4/testRes4",
+    "pages/shareRes2/shareRes2",
+    "pages/shareRes3/shareRes3",
+    "pages/shareRes4/shareRes4",
+    "pages/showRes2/showRes2",
+    "pages/showRes3/showRes3",
+    "pages/showRes4/showRes4",
+    "pages/test_page/test_page",
+    "pages/article/article",
+    "pages/shareRes1/shareRes1"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#548CD7",
+    "navigationBarTitleText": "性格测试",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#548CD7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/sy.png",
+        "selectedIconPath": "img/sy1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/myTest/myTest",
+        "iconPath": "img/grzx.png",
+        "selectedIconPath": "img/grzx1.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

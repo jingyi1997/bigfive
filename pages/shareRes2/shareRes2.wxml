@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="cont" >
+        
+      <view wx:if="{{!hiddenLoading}}">
+         <loading hidden="false">正在加载</loading>
+      </view>
+      <view wx:elif="{{hasRecord}}">
+      <view class='result'>
+        <view >
+                你的好友{{name}}的得分为{{(score)}}
+              </view>
+              <view >
+                你的好友{{name}}的抑郁程度超过了{{(per)}}%的人
+              </view>
+              </view>
+              <view class="btn">
+                <navigator open-type="switchTab" url="../index/index" >
+                    <button   class="lan" style="">返回首页 </button>
+                </navigator>
+                  
+              </view>
+      </view>
+      <view wx:else class="noRecord">
+        未查询到相关的做题记录
+      </view>
+
+
+
+      
+      
+   
+  
+</view>

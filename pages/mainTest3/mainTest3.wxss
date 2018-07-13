@@ -1,0 +1,75 @@
+page{
+  background-color: white;
+  padding-top: 10px;
+  
+}
+.pic{
+   
+  margin-left:auto;
+  margin-right:auto;
+} 
+.test-title{
+  font-weight:bold;
+  margin: 5px 15px;
+}
+
+.options{
+  display: block;
+  margin-left: 30px;
+  margin-right:8px;
+  margin-top: 10px;
+}
+.btn{
+  display: block;
+  width: 60%;
+  text-align: center;
+  margin:18px auto;
+ 
+}
+.button{
+  background-color:#548CD7;
+  color: #fff;
+}
+.current_ques{
+    margin:8px 0 28px 10px;
+    color:#999;
+    font-size:13px;
+}
+.top{
+   display: flex;
+   flex-wrap:nowrap;
+}
+.sec_title{
+
+  display: flex;
+  margin: 27px 10px 10px 0px;
+  color:black;
+
+}
+.icon{
+  display: flex;
+  width:50px;
+  height:50px;
+  position:relative;
+  margin: 24px 0px 10px 17px;
+
+}
+.input{ 
+  padding-left: 10px; height: 34px; 
+} 
+.inputView{ 
+  border: 2px solid #548CD7; border-radius: 40px; margin-left: 20px; margin-right: 20px; margin-top: 15px; 
+}
+.next{
+  background-color: #548CD7;
+  color: #fff;
+
+}
+button {
+  margin: 30px 40px;
+  height:40px;
+  line-height: 40px; 
+}
+.pickerView{
+  border: 2px solid #548CD7; border-radius: 40px; margin-left: 20px; margin-right: 20px; margin-top: 15px; text-align:center;
+}

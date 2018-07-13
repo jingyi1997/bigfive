@@ -1,0 +1,51 @@
+<!--shareRes1.wxml-->
+<view class="content">
+    
+         
+            
+            <view wx:if="{{load_done}}">
+            <view class='title'>
+                五大性格测试
+              </view>
+              <view class='title'>
+                {{other_name}}和{{last_name}}的默契度是{{simi}}%
+              </view>
+            
+              <canvas canvas-id='radarCanvas' style="width: {{imageWidth}}px; height: 290px;" class="pic"></canvas>
+              <view class="btn">                
+                    <button bindtap='testSimi'  class="lan" style="">点击测试和我的默契度</button>
+                  
+              </view>
+              <view class='per' >
+                {{other_name}}的外向性超过了{{(percentage[0])}}%的人，责任心超过了{{(percentage[1])}}%的人，想象力超过了{{(percentage[2])}}%的人，亲和力超过了{{(percentage[3])}}%的人，神经质超过了{{(percentage[4])}}%的人。
+              </view>
+              <view class="add_info">
+                <view class="per_des">
+                  测试表明{{other_name}}{{ans_des[max_index].desc1}}{{other_name}}{{ans_des[max_index].desc2}}
+                </view>
+
+                <view class="table">
+                  <view class="tr">
+                      <view class="th th1">职位</view>
+                      <view class="th th2">2016中位收入(美元)*</view>
+                      <view class="th th3">2016到2026工作增长</view>
+                  </view>
+                  <view class="tr" wx:key wx:for="{{ans_des[max_index].pos}}">
+                      <view class="td td1">{{item.pos_name}}</view>
+                      <view class="td td2">{{item.income}}</view>
+                      <view class="td td3">{{item.incr}}</view>
+                  </view>
+                </view>
+                
+              </view>
+              <view class="line-css">
+                </view>
+            </view>
+            <view wx:else>
+              <loading >正在加载</loading>
+            </view>
+            
+          
+    
+   
+</view>

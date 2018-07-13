@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="cont" >
+ 
+      
+      <view class='userbg' style=''>
+          <view class="userinfo">
+              
+              <block >
+                <image  class="userinfo-avatar" src="{{image}}"                    background-size="cover"></image>
+                <text class="userinfo-nickname">我的头像</text>
+              </block>
+          </view>
+      </view>
+      <view wx:if="{{!hiddenLoading}}">
+         <loading hidden="false">正在加载</loading>
+      </view>
+      <view wx:elif="{{hasRecord}}">
+        <canvas canvas-id='radarRecords' style="width: {{imageWidth}}px; height: 290px;" class="pic"></canvas>
+      </view>
+      <view wx:else class="noRecord">
+        未查询到您的做题记录
+      </view>
+
+
+
+      
+      
+   
+  
+</view>

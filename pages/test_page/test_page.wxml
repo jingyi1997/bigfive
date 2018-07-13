@@ -1,0 +1,15 @@
+<view class='title'>
+    {{test_title}}
+</view>
+<view class='content'>
+    <text class='' decode="{{true}}">
+      &nbsp;&nbsp;&nbsp;&nbsp; {{test_desc}}
+    </text>
+</view>
+<view class='btn'>
+   <button open-type="getUserInfo" bindgetuserinfo ="getUserInfo"  class="lan" style="">开始测试 </button>
+</view>
+<view wx:if="{{testid==0}}"class='btn'>
+   <button bindtap="clickbtn_intro"  class="lan" style="">{{test_title}}简介 </button>
+</view>
+

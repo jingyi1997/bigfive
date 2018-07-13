@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="cont" >
+ 
+      
+      <view class='userbg' style=''>
+            <view class="userinfo">
+              
+              <block >
+                <image  class="userinfo-avatar" src="{{image}}"                  background-size="cover"></image>
+                <text class="userinfo-nickname">我的头像</text>
+              </block>
+            </view>
+            <view wx:if="{{load_done}}">
+            <view class='header'>
+              <text>测试结果</text>
+            </view>
+            <view wx:if="{{hasRecord}}">
+            <view wx:if="{{bigfive==1}}" class='info-bot info-mar' bindtap="bigfive" >
+              <view class='gywm'>
+                  <text class='text-icon'>五大性格量表测试</text>
+                  <text class='text-all'></text>
+              </view>
+            </view>
+            
+            <view wx:if="{{depression==1}}"class='info-bot' bindtap="dep">
+              <view class='gywm'>
+                    <text class='text-icon'>抑郁测试</text>
+                    <text class='text-all'></text>
+              </view>
+            </view>
+            <view wx:if="{{lonely==1}}" class='info-bot' bindtap="lonely">
+              <view class='gywm'>
+                    <text class='text-icon'>孤独测试</text>
+                    <text class='text-all'></text>
+              </view>
+            </view>
+             <view wx:if="{{happy==1}}"class='info-bot' bindtap="happy">
+              <view class='gywm'>
+                    <text class='text-icon'>幸福测试</text>
+                    <text class='text-all'></text>
+              </view>
+            </view>
+            </view>
+            </view>
+            <view wx:else>
+              <loading hidden="false">正在加载</loading>
+            </view>
+      </view>
+      
+
+      
+      
+   
+  
+</view>

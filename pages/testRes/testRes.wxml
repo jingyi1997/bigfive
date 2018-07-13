@@ -1,0 +1,71 @@
+<view class="content">
+    
+         
+            <view class="canvas-box">
+               <canvas canvas-id="myCanvas" style="width:100%;height:{{1.2*imageWidth}}px;"> 
+               </canvas>
+            </view>
+            <view wx:if="{{share_image}}">
+            <image style="width:100%" mode = "widthFix"src = "{{share_temp}}"></image>
+            <view class="btn ">
+                  <button bindtap="saveImage"  class="lan" style="">保存图片到相册 </button>
+              </view>
+              <view class="btn ">
+                  <button bindtap="backtoResult"  class="lan" style="">返回结果页面 </button>
+              </view>
+            </view>
+            <view wx:elif="{{load_done}}">
+              <view class='title'>
+                {{answer[27]}}和{{other_name}}的默契度是{{simi}}%
+              </view>
+            
+              <canvas canvas-id='radarCanvas' style="width: {{imageWidth}}px; height: 290px;" class="pic"></canvas>
+              <view class='per' >
+                你的外向性超过了{{(percentage[0])}}%的人，你的责任心超过了{{(percentage[1])}}%的人，你的想象力超过了{{(percentage[2])}}%的人，你的亲和力超过了{{(percentage[3])}}%的人，你的神经质超过了{{(percentage[4])}}%的人。
+              </view>
+              <view class="add_info">
+                <view class="per_des">
+                  {{ans_des[max_index].desc}}
+                </view>
+
+                <view class="table">
+                  <view class="tr">
+                      <view class="th th1">职位</view>
+                      <view class="th th2">2016中位收入(美元)*</view>
+                      <view class="th th3">2016到2026工作增长</view>
+                  </view>
+                  <view class="tr" wx:key wx:for="{{ans_des[max_index].pos}}">
+                      <view class="td td1">{{item.pos_name}}</view>
+                      <view class="td td2">{{item.income}}</view>
+                      <view class="td td3">{{item.incr}}</view>
+                  </view>
+                </view>
+              </view>
+            
+              <view class="btn fenxiang">
+                  <button open-type="share" bindtap="clickbtn"  class="lan" style="">分享给好友 </button>
+              </view>
+              <view class="btn ">
+                  <button bindtap="shareMoments"  class="lan" style="">分享到朋友圈 </button>
+              </view>
+              <view class="btn">
+                <navigator open-type="switchTab" url="../index/index" >
+                    <button   class="lan" style="">返回首页 </button>
+                </navigator>
+                  
+              </view>
+              <view class="btn">
+        
+                    <button  bindtap="testAgain" class="lan" style="">重新测试 </button>
+            
+                  
+              </view>
+            </view>
+            <view wx:else>
+              <loading >正在加载</loading>
+            </view>
+            
+          
+    
+   
+</view>

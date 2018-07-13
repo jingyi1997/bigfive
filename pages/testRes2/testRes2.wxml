@@ -1,0 +1,25 @@
+<view class="content">
+         <view  wx:if="{{load_done}}">
+         <view class='result'>
+              <view >
+                你的得分为{{(score)}}
+              </view>
+              <view >
+                你的抑郁程度超过了{{(percentage)}}%的人
+              </view>
+          </view>  
+              <view class="btn fenxiang">
+                  <button open-type="share" bindtap="clickbtn"  class="lan" style="">分享给好友 </button>
+              </view>
+              <view class="btn">
+                <navigator open-type="switchTab" url="../index/index" >
+                    <button   class="lan" style="">返回首页 </button>
+                </navigator>
+                  </view>
+              </view>
+           
+            <view wx:else>
+              <loading >正在加载</loading>
+            </view>
+ 
+</view>
